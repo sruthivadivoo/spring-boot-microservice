@@ -1,0 +1,1 @@
+insert into CUSTOMER values(1,23,'li','ff',9786718997,25000);
