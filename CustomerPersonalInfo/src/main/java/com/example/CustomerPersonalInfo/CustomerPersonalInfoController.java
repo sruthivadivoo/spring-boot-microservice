@@ -1,7 +1,5 @@
 package com.example.CustomerPersonalInfo;
 
-
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -82,4 +80,3 @@ public String newCustomer() {
 		 return "showPolicyNo.jsp";
 	}
 }
-	

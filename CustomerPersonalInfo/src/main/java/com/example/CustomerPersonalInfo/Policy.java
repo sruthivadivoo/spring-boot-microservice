@@ -1,5 +1,4 @@
 package com.example.CustomerPersonalInfo;
-
 import java.util.List;
 
 public class Policy {

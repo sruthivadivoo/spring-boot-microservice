@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+body {
+  background-color: powderblue;
+}
+img {
+  display: block;
+  background-repeat: no-repeat;
+width:20%;
+  margin-left:auto;
+}
+p{
+	font-size:120%;
+	font-family:Comic Sans MS;
+}
+div {
+  display: block;
+}

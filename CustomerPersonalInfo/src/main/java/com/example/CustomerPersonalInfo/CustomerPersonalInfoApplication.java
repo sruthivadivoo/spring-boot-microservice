@@ -18,5 +18,4 @@ public class CustomerPersonalInfoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CustomerPersonalInfoApplication.class, args);
 	}
-
 }
