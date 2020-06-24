@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 @Autowired
 CustomerRepo crepo;
-
+String usernamepublic="";
 
 @GetMapping("/customers")
 public List<Customer> getCustomers(){
@@ -37,22 +37,24 @@ public void deleteCustomer(@RequestParam("id") String id){
 	crepo.deleteById(no);
 }
 @GetMapping("/login")
-public boolean login(@RequestParam("username") String username, @RequestParam("password") String password) {
-String userpass=username+password;
+public Customer login(@RequestParam("username") String username, @RequestParam("password") String password) {
+String userpass=password;
 int no=Integer.parseInt(username);
 		 Customer cust=new Customer();
+		 Customer cust1=new Customer();
  cust=crepo.findById(no).get();
 String pass=no+cust.getFname();
+System.out.println(cust1.getAge());
 	if(pass.equals(userpass)) {
-		return true;
+		usernamepublic=username;
+		cust1=cust;
 	}
-	else {
-		return false;
-	}
+	System.out.println(cust1.getAge());
+	return cust1;
 }
 @GetMapping("/find")
-public Customer find(@RequestParam("username") String username){
-	int no=Integer.parseInt(username);
+public Customer find(){
+	int no=Integer.parseInt(usernamepublic);
 	System.out.println(no);
 	 System.out.println(crepo.findById(no).get());
 	 Customer cust=new Customer();
